@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.List;
+
 public class toDoSystem {
 
     private linkedList books = new linkedList();
@@ -15,6 +17,7 @@ public class toDoSystem {
         System.out.println("  ***************");
         System.out.println("1) add");
         System.out.println("2) delete");
+        System.out.println("3) list all toDos");
         System.out.println("3) completed");
 
         System.out.println("  0) Exit");
@@ -31,7 +34,7 @@ public class toDoSystem {
             switch(option){
 
                 case 1:
-                    //addToDo();
+                    addToDo();
 
 
                 case 2:
@@ -39,9 +42,12 @@ public class toDoSystem {
                     break;
 
                 case 3:
-                   // completeToDo();
+                    ListToDos();
                     break;
 
+                case 4:
+                    // completeToDo();
+                    break;
                 case 0:
                     sure();
                     break;
@@ -81,6 +87,21 @@ public class toDoSystem {
         }
     }
 
+  public void  addToDo(){
+      System.out.println("Add to ToDo list");
+      System.out.println("Enter Title: ");
+      String title = EasyScanner.nextString();
+      System.out.println("Enter Description");
+      String desc = EasyScanner.nextString();
+      System.out.println("Enter index to put toDo in: ");
+      //ListToDos();
+      int index = EasyScanner.nextInt();
+      toDo toDo1 = new toDo(title,desc);
+      books.add(toDo1,index);
+  }
 
+   public void ListToDos(){
+        books.list();
+    }
 
 }
