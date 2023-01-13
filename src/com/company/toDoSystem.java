@@ -104,4 +104,19 @@ public class toDoSystem {
         books.list();
     }
 
+
+    public void deleteToDo(){
+
+
+        books.list();
+        System.out.println("enter the index you wish to delete: ");
+        int index = EasyScanner.nextInt();
+        if(books.delete(index)){
+            System.out.println("todo deleted successfully");
+        }else{
+            System.out.println("todo deleted unsuccessfully");
+        }
+    }
 }
+
+
