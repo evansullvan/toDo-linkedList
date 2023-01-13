@@ -39,7 +39,20 @@ public class linkedList {
     }
 
     public boolean delete(int index){
+int currentSize = size();
+        Node current = head;
+        for(int i = 0; i< index; i++){
+            current = current.next;
 
+        }
+
+        current.next = current.next.next;
+        int sizeAfter = size();
+        if(currentSize > sizeAfter){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     public void completed(int index){

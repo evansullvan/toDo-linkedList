@@ -36,9 +36,10 @@ public class toDoSystem {
                 case 1:
                     addToDo();
 
+                    break;
 
                 case 2:
-                    //deleteToDo();
+                    deleteToDo();
                     break;
 
                 case 3:
@@ -94,7 +95,7 @@ public class toDoSystem {
       System.out.println("Enter Description");
       String desc = EasyScanner.nextString();
       System.out.println("Enter index to put toDo in: ");
-      //ListToDos();
+     // ListToDos();
       int index = EasyScanner.nextInt();
       toDo toDo1 = new toDo(title,desc);
       books.add(toDo1,index);
