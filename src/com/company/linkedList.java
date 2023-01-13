@@ -38,7 +38,7 @@ public class linkedList {
         return count;
     }
 
-    public void delete(int index){
+    public boolean delete(int index){
 
     }
 
